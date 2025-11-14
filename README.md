@@ -97,34 +97,6 @@ docker run --gpus all \
 	--model-id $MODEL
 ```
 
-graph LR
-    subgraph Location A (e.g., Living Room)
-        ONT -- Ethernet Cable --> MainDeco[Main Deco Unit]
-    end
-
-    subgraph Location B (e.g., Upstairs Hallway)
-        Deco2[Satellite Deco Unit 2]
-    end
-
-    subgraph Location C (e.g., Basement)
-        Deco3[Satellite Deco Unit 3]
-    end
-
-    style MainDeco fill:#f9f,stroke:#333,stroke-width:2px
-    style Deco2 fill:#ccf,stroke:#333,stroke-width:2px
-    style Deco3 fill:#ccf,stroke:#333,stroke-width:2px
-
-    MainDeco -- Wireless Mesh --> Deco2
-    MainDeco -- Wireless Mesh --> Deco3
-    Deco2 -- Wireless Mesh --> Deco3
-    
-    %% Optional: Devices connecting to the network
-    MainDeco -.-> WiFiClientsA(WiFi Devices)
-    Deco2 -.-> WiFiClientsB(WiFi Devices)
-    Deco3 -.-> WiFiClientsC(WiFi Devices)
-
-    classDef default fill:#fff,stroke:#000;
-
 
 
 
